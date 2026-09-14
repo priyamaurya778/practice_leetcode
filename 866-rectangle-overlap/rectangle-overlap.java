@@ -4,10 +4,8 @@ class Solution {
             rec2[2] <= rec1[0] ||   
             rec1[3] <= rec2[1] ||  
             rec2[3] <= rec1[1]) {  
-            
             return false;
-        }
-        
+            }
         return true;
     }
 }
