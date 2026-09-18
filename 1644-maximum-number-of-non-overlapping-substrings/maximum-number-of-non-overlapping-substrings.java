@@ -8,19 +8,15 @@ class Solution {
         List<Integer> order = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             int c = s.charAt(i) - 'a';
-
             if (count[c] == 0) {
                 first[c] = i;
                 order.add(c);
             }
-
             count[c]++;
             last[c] = i;
         }
-
         List<String> res = new ArrayList<>();
         Deque<int[]> queue = new ArrayDeque<>();
-
         for (int c : order) {
             queue.addFirst(new int[]{
                 first[c], last[c], count[c]
@@ -34,7 +30,6 @@ class Solution {
                 total += item[2];
                 left = Math.min(left, item[0]);
                 right = Math.max(right, item[1]);
-
                 if (total == right - left + 1) {
                     break;
                 }
